@@ -9,7 +9,10 @@ export const handler = withSecrets(async (event, { secrets }) => {
     salesforce: formatSecret(secrets.salesforce),
     spotify: formatSecret(secrets.spotify),
     stripe: formatSecret(secrets.stripe),
+    env: process.env
   };
+  
+  
 
   return {
     statusCode: 200,
